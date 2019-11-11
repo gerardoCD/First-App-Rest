@@ -1,4 +1,4 @@
-require('./config/config');
+require('../config/config');
 
 const express = require('express');
 const app = express();
@@ -27,6 +27,7 @@ app.post('/usuario', function(req, res) {
     }
 });
 
+//paso de parametros por URL
 app.put('/usuario/:id', function(req, res) {
     let id = req.params.id;
     res.json({
